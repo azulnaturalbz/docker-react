@@ -4,3 +4,7 @@ services:
 
 before_install:
   - docker build -t csilva/docker-react -f Dockerfile.dev .
+
+
+script:
+  - docker run csilva/docker-react npm run test -- --coverage
